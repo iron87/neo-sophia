@@ -18,6 +18,7 @@ EMBEDDING_MODEL_DEFAULT = 'text-embedding-ada-002'
 def set_api_key(api_key: str) -> None:
     """set the API key"""
     oai.api_key = api_key
+    oai.base_url = 'http://localhost:11434/v1'
 
 
 def load_api_key(file_path: str) -> str:
