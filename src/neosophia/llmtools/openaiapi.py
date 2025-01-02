@@ -12,13 +12,15 @@ import torch
 
 
 EMBEDDING_DIM_DEFAULT = 1536
-EMBEDDING_MODEL_DEFAULT = 'text-embedding-ada-002'
+EMBEDDING_MODEL_DEFAULT = 'nomic-embed-text'
 
 
 def set_api_key(api_key: str) -> None:
     """set the API key"""
+    print(f'OpenAI API');
     oai.api_key = api_key
-    oai.base_url = 'http://localhost:11434/v1'
+    oai.api_base = 'http://localhost:11434/v1'
+    print(f'OpenAI API base URL: {oai.api_base}');
 
 
 def load_api_key(file_path: str) -> str:

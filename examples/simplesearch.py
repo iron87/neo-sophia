@@ -18,7 +18,7 @@ from neosophia.llmtools import openaiapi as oaiapi
 
 MAX_RULES = 5
 QUIT_KEYWORDS = ['q', 'quit', 'x', 'exit']
-OPENAI_LLM_MODEL_NAME = 'gpt-4'
+OPENAI_LLM_MODEL_NAME = 'llama3.2'
 
 
 def qa_func(context: str, question: str) -> str:
